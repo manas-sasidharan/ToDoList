@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <div class="head"><h1>To Do List</h1></div>
+    <div class="body">
+        <div class="main">
+           <h3>
+                <form action=""  >
+                   <label for="taskInput">Task to add</label> 
+                    <input type="text" placeholder="Enter task..." id="taskInput">
+                </form>
+           </h3>
+           <button class="btn" onclick="addTask()">Add New Task
+           </button>
+        </div>
+        <ol class="taskList" id="output">
+            
+        </ol>
+    </div>
+       
+</body>
+<script>
+    function addTask(){
+        // const taskInput = document.getElementById('taskInput');
+        if(taskInput.value){
+            output.innerHTML+=` <div>
+            <label for="noteCheckbox"> ${taskInput.value} </label>
+            <input type="checkbox" id="noteCheckbox">
+            <button onclick="deleteTask(this)">Delete</button>
+            </div>`
+        }
+        else{
+            alert("Please enter a valid text")
+        }
+    }
+    const deleteTask = (button) => {
+        button.parentNode.remove();
+    }
+    // const taskList = document.getElementById("add");
+//     innerHTML.tasks=form
+//   tasksArray=[]
+//   localStorage.getItem("")
+
+</script>
+</html>
